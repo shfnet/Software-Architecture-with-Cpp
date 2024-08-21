@@ -34,10 +34,12 @@ conan profile update env.CC=`which gcc-13` sacpp
 To build the project, first cd to its directory, and then run:
 
 ```bash
+# This works but still spews a lot of outputs on the current directory, that shoulb be in their own dedicated directory.
 mkdir build
 cd build
 conan install .. --build=missing -s build_type=Release -pr=sacpp
-cmake .. -DCMAKE_BUILD_TYPE=Release # build type must match Conan's
+cd ..
+cmake . -DCMAKE_BUILD_TYPE=Release # build type must match Conan's
 cmake --build .
 ```
 
