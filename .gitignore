@@ -1,7 +1,42 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+### Above combination will ignore all files without extension ###
+
+.vscode/
+a.out
+
 .idea/
-*build*/
+**/build/**
 gcm.cache/
 .vscode/
 CMakeLists.txt.user
 venv
 .env
+
+**/CMakeFiles/**
+**/lib/**
+**/bin/**
+
+**/*.a
+**/cmake_install.cmake
+**/CMakeCache.txt
+**/cmakedeps_macros.cmake
+**/conanbuild.sh
+**/conanbuildenv-release-x86_64.sh
+**/conandeps_legacy.cmake
+**/conanrun.sh
+**/conanrunenv-release-x86_64.sh
+**/deactivate_conanbuild.sh
+**/deactivate_conanrun.sh
+**/Microsoft.GSL-release-x86_64-data.cmake
+**/Microsoft.GSL-Target-release.cmake
+**/Microsoft.GSLConfig.cmake
+**/Microsoft.GSLConfigVersion.cmake
+**/Microsoft.GSLTargets.cmake
